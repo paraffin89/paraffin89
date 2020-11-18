@@ -7,7 +7,7 @@
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8f67fb84956e8fd4418e8dd876401a40"></script>
+    <!-- <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=8f67fb84956e8fd4418e8dd876401a40"></script> -->
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/barbour4.jpg" type="image/x-icon">
   </head>
   <body>
 
@@ -73,20 +74,12 @@
 	    			<div class="col-md-12 blog-wrap bg-darken">
 	    				<div class="row no-gutters align-items-center">
 	    					<div class="col-md-6 d-flex justify-content-center align-items-center order-md-last js-fullheight">
-	    						<div class="img" style="background-image: url(images/image_4.jpg);"></div>
+	    						<div class="img" style="background-image: url(images/barbour5.jpg);"></div>
 	    					</div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<div class="icon d-flex align-items-center mb-5">
-	    								<div class="img" style="background-image: url(images/person_2.jpg);"></div>
-	    								<div class="position pl-3">
-	    									<h4 class="mb-0">Jamie Jonson</h4>
-	    									<span>fashion.com</span>
-	    								</div>
-	    							</div>
-	    							<h2 class="mb-4"><a href="blog-single.html">Make Peace With Your Broken Pieces</a></h2>
-	    							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-	    							<p class="mb-0 mt-4"><a href="#" class="btn btn-primary">Read more <span class="ion-ios-arrow-forward"></span></a></p>
+	    							<h2 class="mb-4" style="color: #ddd">Instagram</h2>
+	    							<p>contact : @paraffin89</p>
 	    						</div>
 	    					</div>
 	    				</div>
@@ -94,21 +87,14 @@
 	    			
 	    			<div class="col-md-12 blog-wrap">
 	    				<div class="row no-gutters align-items-center">
-	    					<div class="col-md-6 img js-fullheight" style="background-image: url(images/image_9.jpg);">
+	    					<div class="col-md-6 img js-fullheight" style="background-image: url(images/barbour1_1.jpg);">
 	    						
 	    					</div>
 	    					<div class="col-md-6">
 	    						<div class="text p-md-5 p-4 ftco-animate">
-	    							<div class="icon d-flex align-items-center mb-5">
-	    								<div class="img" style="background-image: url(images/person_3.jpg);"></div>
-	    								<div class="position pl-3">
-	    									<h4 class="mb-0">Jamie Jonson</h4>
-	    									<span>fashion.com</span>
-	    								</div>
-	    							</div>
-	    							<h2 class="mb-4"><a href="blog-single.html">Make Peace With Your Broken Pieces</a></h2>
-	    							<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove.</p>
-	    							<p class="mb-0 mt-4"><a href="#" class="btn btn-primary">Read more <span class="ion-ios-arrow-forward"></span></a></p>
+	    							
+	    							<h2 class="mb-4"><a href="blog-single.html">Re-waxing service</a></h2>
+	    							<p>Waxed jacket cleaning, re-waxing.</p>
 	    						</div>
 	    					</div>
 	    				</div>
@@ -165,7 +151,7 @@
 	              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
 	                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
 	                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-	                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+	                <li class="ftco-animate"><a href="https://www.instagram.com/paraffin89/"><span class="icon-instagram"></span></a></li>
 	              </ul>
 	            </div>
 	          </div>
@@ -263,19 +249,15 @@
 		    position: markerPosition
 		};
 
-		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-	    mapOption = { 
-	        center: new kakao.maps.LatLng(35.159481, 129.062136), // 이미지 지도의 중심좌표
-	        marker:marker,
-	        level: 1 // 지도의 확대 레벨
-	    };
+		var staticMapContainer  = document.getElementById('map'), // 이미지 지도를 표시할 div  
+		    staticMapOption = { 
+		        center: new kakao.maps.LatLng(35.159481, 129.062136), // 이미지 지도의 중심좌표
+		        level: 1, // 이미지 지도의 확대 레벨
+		        marker: marker // 이미지 지도에 표시할 마커 
+		    };    
 
-		var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-		// 지도 확대 축소를 제어할 수 있는  줌 컨트롤을 생성합니다
-		var zoomControl = new kakao.maps.ZoomControl();
-		map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
-
+		// 이미지 지도를 생성합니다
+		var staticMap = new kakao.maps.StaticMap(staticMapContainer, staticMapOption);
 	</script>
 
   </body>
