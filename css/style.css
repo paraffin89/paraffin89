@@ -40,14 +40,31 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+@font-face {
+    font-family: 'GmarketSansBold';
+    src: url('./fonts/gmarket/GmarketSansBold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('./fonts/gmarket/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 html {
-  font-family: sans-serif;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block; }
+
+span {
+  font-family: 'GmarketSansMedium'
+}
 
 body {
   margin: 0;
@@ -73,6 +90,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.5rem; }
 
 p {
+  font-family: 'GmarketSansMedium';
   margin-top: 0;
   margin-bottom: 1rem; }
 
@@ -310,6 +328,7 @@ h1, .h1 {
   font-size: 2.5rem; }
 
 h2, .h2 {
+  font-family: 'GmarketSansBold' !important;
   font-size: 2rem; }
 
 h3, .h3 {
@@ -8726,7 +8745,7 @@ header {
       color: #000; }
 
 .hero-wrap {
-  height: 700px;
+  /*height: 700px;*/
   position: relative;
   overflow: hidden;
   background-size: cover;
@@ -9109,7 +9128,7 @@ textarea.form-control {
 .logo-img,
 .blog-img,
 .user-img {
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center; }
 
